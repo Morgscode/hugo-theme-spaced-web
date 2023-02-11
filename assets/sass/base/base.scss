@@ -1,0 +1,53 @@
+/* 
+------- BASE ------- 
+*/
+
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: $bodyFont;
+  color: $colorBlack;
+  position: relative;
+  background-color: $colorWhite;
+}
+
+.skip-to-main-content-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 10;
+  padding: 1em;
+  background-color: $colorGrey;
+  border: 2px solid $colorBlack;
+  color: $colorBlack;
+  opacity: 0;
+}
+.skip-to-main-content-link:focus {
+  top: 2rem;
+  left: 2rem;
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  html {
+    background-color: rgba($colorBlack, 0.9);
+    color: $colorWhite;
+  }
+
+  .skip-to-main-content-link {
+    background-color: $colorBlack;
+    border: 2px solid $colorWhite;
+    color: $colorWhite;
+  }
+}

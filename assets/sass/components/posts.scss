@@ -1,0 +1,123 @@
+.posts {
+  &-list {
+    list-style: none;
+    &-item {
+      padding: #{$spacing-l / 2};
+      border-radius: $borderRadius;
+      background-color: darken($colorWhite, 10);
+      &:last-child {
+        margin-bottom: 0px;
+      }
+      span {
+        font-weight: 600;
+      }
+      &-title {
+        font-size: 6vh;
+        color: $colorBlack;
+        & > a {
+          color: $colorBlack;
+          font-family: $titleFont;
+        }
+      }
+      &-link {
+        a {
+          color: $colorBlack;
+          display: inline-block;
+          text-decoration: none;
+          font-family: $titleFont;
+          border: 2px solid $colorBlack;
+          border-radius: $borderRadius;
+          padding: #{$spacing-s / 4} #{$spacing-s / 2};
+          font-weight: 600;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.post {
+  &-title {
+    font-size: 6vh;
+    & > a {
+      font-family: $titleFont;
+    }
+  }
+  &-meta {
+    border-radius: $borderRadius;
+    border-bottom: 3px solid darken($colorWhite, 20);
+    background-color: darken($colorWhite, 10);
+    span {
+      font-weight: 600;
+    }
+  }
+  &-content {
+    & > * {
+      line-height: 2;
+      margin-bottom: $spacing-s;
+    }
+    h1, h2, h3 {
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+    ol,
+    ul {
+      margin-top: calc(#{$spacing-s} / 2);
+      margin-bottom: calc(#{$spacing-s} / 2);
+      li {
+        &::marker {
+          display: inline;
+        }
+        & > * {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+.tag {
+  display: inline-block;
+  border: 2px solid $colorBlack;
+  border-radius: $borderRadius;
+  padding: #{$spacing-s / 4} #{$spacing-s / 2};
+  color: $colorBlack;
+}
+
+@media (prefers-color-scheme: dark) {
+  .posts {
+    &-list {
+      &-item {
+        background-color: darken($colorBlack, 10);
+        &:last-child {
+          margin-bottom: 0px;
+        }
+        &-title {
+          color: $colorWhite;
+          & > a {
+            color: $colorWhite;
+          }
+        }
+        &-link {
+          color: $colorWhite;
+          & > a {
+            color: $colorWhite;
+            border: 2px solid $colorWhite;
+          }
+        }
+      }
+    }
+  }
+
+  .post {
+    &-meta {
+      background-color: darken($colorBlack, 10);
+      border-bottom: 3px solid lighten($colorBlack, 20);
+    }
+  }
+
+  .tag {
+    color: $colorWhite;
+    border: 2px solid $colorWhite;
+  }
+}

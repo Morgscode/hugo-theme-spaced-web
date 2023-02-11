@@ -1,0 +1,33 @@
+{{ $tiles := .tiles }}
+{{ $bundle := .bundle }}
+<div class="tiles">
+    {{- $count := 1 -}}
+    {{- with $tiles -}}
+    {{- range . -}}
+    <div class="tiles-row p-b-l p-t-l">
+        <div class="row m-b-m items-center">
+            {{ $cols := "col-6 col-md-12"}}
+            {{- if eq (mod $count 2) 0 -}}
+            {{ $cols = "col-6 col-md-12 mx-auto order-2" }}
+            {{- end -}}
+            <div class="{{ $cols }}">
+                <div class="p-3">
+                    {{ .Content }}
+                </div>
+            </div>
+            {{ $cols := "col-6 col-md-12"}}
+            {{- if eq (mod $count 2) 0 -}}
+            {{ $cols = "col-6 col-md-12 mx-auto order-1" }}
+            {{- end -}}
+            <div class="{{ $cols }}">
+                {{ $image := $bundle.Resources.GetMatch .Params.image }}
+                {{- with $image -}}
+                <div class="image" style="background-image: url({{ .Permalink }})"></div>
+                {{- end -}}
+            </div>
+        </div>
+    </div>
+    {{ $count = add $count 1 }}
+    {{- end -}}
+    {{ end }}
+</div>

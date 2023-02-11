@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  &__title {
+    a {
+      color: $colorBlack;
+      &:visited {
+        color: $colorBlack;
+      }
+    }
+  }
+  &::after {
+    background-color: $colorBlack;
+    display: inline-block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 90%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .header {
+    &__title {
+      a {
+        color: $colorWhite;
+        &:visited {
+          color: $colorWhite;
+        }
+      }
+    }
+    &::after {
+      background-color: lighten($colorBlack, 30);
+    }
+  }
+}

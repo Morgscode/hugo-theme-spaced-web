@@ -1,0 +1,224 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25;
+  font-family: $titleFont;
+  font-weight: 700;
+  margin-bottom: 1.15rem;
+}
+
+h1 {
+  font-size: 8vh;
+}
+
+h2 {
+  font-size: 6vh;
+}
+
+h3 {
+  font-size: 3.25vh;
+}
+
+h4 {
+  font-size: #{$fontSize * 1.25};
+}
+
+h5 {
+  font-size: #{$fontSize * 1.15};
+}
+
+h6 {
+  font-size: $fontSize;
+}
+
+p {
+  font-size: $fontSize;
+  color: $colorBlack;
+  font-weight: 400;
+  line-height: 2;
+  font-family: $bodyFont;
+  &:not(:last-child) {
+    margin-bottom: $spacing-s;
+  }
+}
+
+code,
+blockquote {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  background-color: darken($colorBlack, 10);
+  color: $colorWhite;
+  line-height: 1.5;
+  border-radius: $borderRadius;
+  padding: #{$spacing-s / 5} $spacing-s;
+  white-space: normal;
+  &::before {
+    display: inline-block;
+    background-color: $colorGreen;
+    content: '';
+    height: 100%;
+    width: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: $borderRadius;
+  }
+}
+
+pre code {
+  max-width: 100%;
+  white-space: pre;
+  overflow: auto;
+  line-height: 2;
+  display: inline-block;
+  position: relative;
+  color: $colorWhite;
+  padding: $spacing-s;
+  margin: $spacing-s 0;
+  box-shadow: 0px 5px 10px #333333;
+  & > * {
+    max-width: 100%;
+  }
+}
+
+blockquote {
+  line-height: 2;
+  display: inline-block;
+  position: relative;
+  color: $colorWhite;
+  padding: $spacing-s;
+  margin: $spacing-s 0;
+  box-shadow: 0px 5px 10px #333333;
+  & > * {
+    color: $colorWhite;
+    font-size: #{$fontSize + 0.5rem};
+    line-height: 1.5;
+    background-color: transparent;
+  }
+  em {
+    display: block;
+    background-color: transparent;
+  }
+}
+
+ol,
+ul {
+  display: block;
+  list-style-position: inside;
+  margin: $spacing-s 0;
+  li {
+    line-height: 1.5;
+    font-family: $bodyFont;
+    font-size: $fontSize;
+    color: $colorBlack;
+    font-weight: 400;
+  }
+}
+
+em {
+  padding: 4px $spacing-s;
+  background-color: darken($colorWhite, 10);
+}
+
+a {
+  color: $colorBlue;
+  text-decoration: none;
+  font-family: $bodyFont;
+  &:visited {
+    color: $colorPurple;
+  }
+}
+
+label {
+  color: $colorBlack;
+  font-family: $titleFont;
+  display: block;
+  line-height: normal;
+  margin-bottom: #{$spacing-s / 2};
+}
+
+input {
+  display: inline-block;
+  padding: #{$spacing-s / 2};
+  border-radius: $borderRadius;
+  border: 2px solid $colorBlack;
+  margin-bottom: #{$spacing-s / 2};
+  background-color: transparent;
+  color: $colorBlack;
+}
+
+input[type='submit'], button {
+  cursor: pointer;
+  padding: #{$spacing-s / 2} #{$spacing-m / 2};
+  background-color: transparent;
+  font-family: $titleFont;
+  font-size: #{$fontSize + 0.15rem};
+  font-weight: 700;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: darken($colorGrey, 10);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $colorPurple;
+  border-radius: $borderRadius;
+}
+
+@media (prefers-color-scheme: dark) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $colorWhite;
+  }
+
+  p {
+    color: $colorWhite;
+  }
+
+  ul,
+  ol {
+    li {
+      color: $colorWhite;
+    }
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: darken($colorBlack, 10);
+  }
+
+  code,
+  blockquote {
+    background-color: lighten($colorBlack, 10);
+    color: $colorWhite;
+  }
+
+  em {
+    background-color: darken($colorBlack, 10);
+  }
+
+  label {
+    color: $colorWhite;
+  }
+  
+  input {
+    border: 2px solid $colorWhite;
+    color: $colorWhite;
+  }
+
+}
