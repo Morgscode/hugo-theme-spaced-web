@@ -1,0 +1,6 @@
+{{ define "main" }}
+    <article class="col-8 col-md-12 mx-auto p-t-l p-b-l">
+        {{ .Content }}
+    </article>
+    {{- partial "contact-form.html" . -}}
+{{ end }}

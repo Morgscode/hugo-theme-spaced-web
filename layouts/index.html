@@ -1,43 +1,11 @@
-{{ $bundle := .Site.GetPage "/home" }}
-{{ $tiles :=  $bundle.Resources.Match "home-tile*" }}
-
-<!DOCTYPE html>
-<html>
-{{- partial "head.html" . -}}
-<body>
-    <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
-    {{- partial "header.html" . -}}
-    <main id="main">
-        <section class="p-t-s p-b-s">
-            <div class="container p-1">
-                <article class="col-8 col-md-12 mx-auto p-t-l p-b-l">
-                    <div class="text-lg">
-                        {{ .Content }}
-                    </div>
-                </article>
-                {{- with $tiles -}}
-                    {{ $context := dict "tiles" $tiles "bundle" $bundle }}
-                    {{- partial "tiles.html" $context -}}
-                {{- end -}}
-                </div>
-            </div>
-        </section>
-    </main>
-    {{- partial "footer.html" . -}}
-    {{- $js := resources.Get "js/main.js" -}}
-    <script>
-        {{- $pages := slice -}}
-        {{- range .Site.AllPages -}} 
-          {{- if not .Draft -}}
-              {{- $page := dict "name" .Name "url" .Permalink -}}
-              {{- $pages = append $page $pages -}}
-          {{- end -}}
-        {{- end -}} 
-        const SITE_DATA = Object.freeze({
-            pages: {{ jsonify $pages }},
-        });
-    </script>
-    <script src="{{ $js.RelPermalink }}"></script>
-</body>
-
-</html>
+{{ define "main" }}
+    {{ $bundle := .Site.GetPage "/home" }}
+    {{ $tiles := $bundle.Resources.Match "home-tile*" }}
+    <article class="col-8 col-md-12 mx-auto p-t-l p-b-l">
+        {{ .Content }}
+    </article>
+    {{- with $tiles -}}
+        {{ $context := dict "tiles" $tiles "bundle" $bundle }}
+        {{- partial "tiles.html" $context -}}
+    {{- end -}}
+{{ end }}

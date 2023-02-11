@@ -37,4 +37,70 @@ window.addEventListener('load', () => {
       });
     }
   })();
+
+  const mailer = (() => {
+    const form = document.querySelector("#contact-form");
+
+    if (form) {
+      const contactFormBtn = form.querySelector("#submit-contact-form");
+      async function SubmitContactForm(submit) {
+        submit.preventDefault();
+        contactFormBtn.disabled = true;    
+        if (form && form.checkValidity()) {
+          // fetch post
+          try {
+            const formDataJSON = convertFormDataToJson(form);
+            const response = await fetch(
+              `${window.location.origin}/.netlify/functions/mail`,
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  Accept: "application/json",
+                  "X-Requested-With": "XMLHttpRequest",
+                },
+                body: formDataJSON,
+              }
+            );
+            if (response.status !== 200) {
+              throw new Error();
+            }
+          } catch (error) {
+            
+          } finally {
+            contactFormBtn.disabled = false;
+          }
+        
+        } 
+      }
+    
+      function convertFormDataToJson(form) {
+        const formData = new FormData(form);
+        let postData = new Object();
+        formData.forEach((value, key) => (postData[key] = value));
+        const json = JSON.stringify(postData);
+        return json;
+      }
+    
+      function attach() {
+        let attached = false;
+        window.addEventListener("DOMContentLoaded", () => {
+          const contactFormBtn = document.querySelector("#portfolioContactSubmit");
+          if (contactFormBtn) {
+            contactFormBtn.addEventListener("click", submitPortfolioContactForm);
+            attached = true;
+          }
+        });
+        return attached;
+      }
+    
+      return {
+        submitPortfolioContactForm,
+        convertFormDataToJson,
+        attached: attach(),
+      };
+    }
+
+    })();
+
 });
