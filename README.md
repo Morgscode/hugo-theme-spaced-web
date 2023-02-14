@@ -4,7 +4,7 @@ A beautifully minimalistic Hugo theme for blogs. With dark mode, page search and
 
 TODOS:
 
-![Intro](https://github.com/Morgscode/hugo-theme-spaced-blog/blob/master/images/cover.png)
+![Intro](https://github.com/Morgscode/hugo-theme-spaced-web/blob/master/images/cover.png)
 
 Main features:
 
@@ -28,13 +28,13 @@ Clone this repository into `themes/` directory:
 
 ```bash
 $ cd [path]
-$ git submodule add https://github.com/Morgscode/hugo-theme-spaced-blog.git themes/spaced-blog
+$ git submodule add https://github.com/Morgscode/hugo-theme-spaced-web.git themes/spaced-web
 ```
 
 Add this line in the `config.toml` file:
 
 ```toml
-theme = "spaced-blog"
+theme = "spaced-web"
 ```
 
 ## Configuration
@@ -58,27 +58,6 @@ To add a menu item, add the following lines in `menu`:
   identifier = "item-identifier"
   name = "Item Name"
   url = "/item-slug"
-```
-
-The basic menu structure you'll need for this theme is:
-
-```toml
-[menu]
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    identifier = "categories"
-    name = "Categories"
-    url = "/categories"
-    weight = 2
-  [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags"
-    weight = 3
 ```
 
 #### Site colors
@@ -115,7 +94,7 @@ To use cover images for the blog: set the `useCover` param to `true`.
 
 To add a default cover image for your entire blog, name your image `blog-cover.jpg` and place in `assets/images`.
 
-To add a default cover image for a specific page - place an image named `cover.jpg` in the page bundle.
+To add a default cover image for a specific post - place an image named `cover.jpg` in the page bundle.
 
 [Read the Hugo documentation](https://gohugo.io/content-management/menus/#readout) for more informations about menus.
 
