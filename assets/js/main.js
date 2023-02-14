@@ -39,13 +39,14 @@ window.addEventListener('load', () => {
   })();
 
   const mailer = (() => {
-    const form = document.querySelector("#contact-form");
+    const form = document.querySelector('#contact-form');
+    console.log(form);
 
     if (form) {
-      const contactFormBtn = form.querySelector("#submit-contact-form");
+      const contactFormBtn = form.querySelector('#submit-contact-form');
       async function SubmitContactForm(submit) {
         submit.preventDefault();
-        contactFormBtn.disabled = true;    
+        contactFormBtn.disabled = true;
         if (form && form.checkValidity()) {
           // fetch post
           try {
@@ -53,11 +54,11 @@ window.addEventListener('load', () => {
             const response = await fetch(
               `${window.location.origin}/.netlify/functions/mail`,
               {
-                method: "POST",
+                method: 'POST',
                 headers: {
-                  "Content-Type": "application/json",
-                  Accept: "application/json",
-                  "X-Requested-With": "XMLHttpRequest",
+                  'Content-Type': 'application/json',
+                  Accept: 'application/json',
+                  'X-Requested-With': 'XMLHttpRequest',
                 },
                 body: formDataJSON,
               }
@@ -65,15 +66,20 @@ window.addEventListener('load', () => {
             if (response.status !== 200) {
               throw new Error();
             }
+            alert(
+              'Your message has been delivered!'
+            );
           } catch (error) {
-            
+            console.error(error);
+            alert(
+              'There was a problem submitting your contact form - please try again.'
+            );
           } finally {
             contactFormBtn.disabled = false;
           }
-        
-        } 
+        }
       }
-    
+
       function convertFormDataToJson(form) {
         const formData = new FormData(form);
         let postData = new Object();
@@ -81,26 +87,10 @@ window.addEventListener('load', () => {
         const json = JSON.stringify(postData);
         return json;
       }
-    
-      function attach() {
-        let attached = false;
-        window.addEventListener("DOMContentLoaded", () => {
-          const contactFormBtn = document.querySelector("#portfolioContactSubmit");
-          if (contactFormBtn) {
-            contactFormBtn.addEventListener("click", submitPortfolioContactForm);
-            attached = true;
-          }
-        });
-        return attached;
+
+      if (form) {
+        form.addEventListener('submit', SubmitContactForm);
       }
-    
-      return {
-        submitPortfolioContactForm,
-        convertFormDataToJson,
-        attached: attach(),
-      };
     }
-
-    })();
-
+  })();
 });
