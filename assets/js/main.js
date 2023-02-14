@@ -66,6 +66,7 @@ window.addEventListener('load', () => {
             if (response.status !== 200) {
               throw new Error();
             }
+            form.reset();
             alert(
               'Your message has been delivered!'
             );
