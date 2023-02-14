@@ -13,18 +13,15 @@ $colorPurple: {{ .Site.Params.colors.purple | default "#9c88ff"}};
 @import "./base/typography.scss";
 @import "./base/elements.scss";
 // layout
-@import "./layout/container.scss";
+@import "./layout/container.scss"; 
 @import "./layout/row.scss";
 @import "./layout/columns.scss";
-@import "./layout/utilities.scss";
+@import "./layout/utilities.scss"; 
 // components
 @import "./components/header.scss";
 @import "./components/navigation.scss";
 @import "./components/posts.scss";
-<<<<<<< HEAD
-=======
 @import "./components/grid-column.scss";
->>>>>>> e28613d (theme rename)
 @import "./components/images.scss";
 @import "./components/author.scss";
 @import "./components/pagination.scss";
