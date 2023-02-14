@@ -1,12 +1,25 @@
+<<<<<<< HEAD
 name = "Spaced Digital Theme"
 license = "MIT"
 licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
 description = "The theme for Spaced Digital company website"
 homepage = "https://spaced-digital.com"
+=======
+name = "Spaced Web Theme"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+description = "The theme for Spaced Web company website"
+homepage = "https://spaced-web.com"
+>>>>>>> e28613d (theme rename)
 tags = []
 features = []
 min_version = "0.41.0"
 
 [author]
+<<<<<<< HEAD
   name = "Spaced Digital"
   homepage = "https://spaced-digital.com"
+=======
+  name = "Spaced Web"
+  homepage = "https://spaced-web.com"
+>>>>>>> e28613d (theme rename)

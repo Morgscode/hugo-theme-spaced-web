@@ -1,5 +1,10 @@
 {{ define "main" }}
+<<<<<<< HEAD
     {{ $bundle := .Site.GetPage "/home" }}
+=======
+    {{ $cxt := . }}
+    {{ $bundle := .Site.GetPage .Params.bundle }}
+>>>>>>> e28613d (theme rename)
     {{ $tiles := $bundle.Resources.Match "home-tile*" }}
     <article class="col-8 col-md-12 mx-auto p-t-l p-b-l">
         {{ .Content }}

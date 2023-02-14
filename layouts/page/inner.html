@@ -1,0 +1,13 @@
+{{ define "main" }}
+    {{ $ctx := . }}
+    <article class="col-8 col-md-12 mx-auto p-t-l p-b-l">
+        {{ .Content }}
+    </article>
+    {{ $bundle := .Site.GetPage .Params.bundle }}
+    {{ $columns := $bundle.Resources.Match "column*" }}
+    {{- with $columns -}}
+        {{ $title :=  $ctx.Params.columntitle }}
+        {{ $context := dict "title" $title "columns" $columns "bundle" $bundle }}
+        {{- partial "grid-column.html" $context -}}
+    {{- end -}}
+{{ end }}

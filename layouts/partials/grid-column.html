@@ -1,0 +1,22 @@
+{{ $columns := .columns }}
+{{ $bundle := .bundle }}
+<div class="columns">
+    <h2 class="text-center">{{ .title }}</h2>
+    {{- $count := 1 -}}
+    {{- with $columns -}}
+    <div class="grid-column p-b-l p-t-l">
+        {{- range . -}}
+        <div class="column col-6" data-id="{{ $count }}">
+            {{ $image := $bundle.Resources.GetMatch .Params.image }}
+            {{- with $image -}}
+            <div class="image" style="background-image: url({{ .Permalink }})"></div>
+            {{- end -}}
+            <div class="p-3">
+                {{ .Content }}
+            </div>
+        </div>
+        {{ $count = add $count 1 }}
+        {{- end -}}
+    </div>
+    {{ end }}
+</div>

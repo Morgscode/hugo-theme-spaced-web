@@ -21,6 +21,10 @@ $colorPurple: {{ .Site.Params.colors.purple | default "#9c88ff"}};
 @import "./components/header.scss";
 @import "./components/navigation.scss";
 @import "./components/posts.scss";
+<<<<<<< HEAD
+=======
+@import "./components/grid-column.scss";
+>>>>>>> e28613d (theme rename)
 @import "./components/images.scss";
 @import "./components/author.scss";
 @import "./components/pagination.scss";
