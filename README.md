@@ -1,6 +1,6 @@
 # Spaced Web Theme
 
-A beautifully minimalistic Hugo theme for Personal and Portfolio websites. With dark mode, page search and a11y out of the box.
+A beautifully minimalistic Hugo theme for personal and portfolio websites. With dark mode, page search and a11y out of the box.
 
 ![Intro](https://github.com/Morgscode/hugo-theme-spaced-web/blob/master/images/cover.png)
 
@@ -58,7 +58,7 @@ To add a menu item, add the following lines in `menu`:
   url = "/item-slug"
 ```
 
-#### Site colors
+### Site colors
 
 You can customise the theme colors from your sites config.
 
@@ -74,14 +74,14 @@ You can customise the theme colors from your sites config.
   purple = "#9c88ff"
 ```
 
-#### Site icon (favicon)
+### Site icon (favicon)
 
 The theme ships with a default site icon (favicon) that is used in the tab in your browser but also the shortcut icon on mobile devices. To use your own favicon, just add it 
 to your sites assets directory `/assets/images/favicon.png`.
 
 The theme expects a `.png` file to be used. Favicons are best kept with an aspect ratio of `1:1`.
 
-#### Cover images
+### Cover images
 
 To use cover images for the blog: set the `useCover` param to `true`.
 
@@ -96,7 +96,7 @@ To add a default cover image for a specific post - place an image named `cover.j
 
 [Read the Hugo documentation](https://gohugo.io/content-management/menus/#readout) for more informations about menus.
 
-#### syntax highlighting
+### syntax highlighting
 
 This theme ships with a slightly altered monakai syntax highlighting stylesheet and more or less the default markup highlight configuration. To use it set the `noClasses` param to false in the `markup highlight` config.
 
@@ -108,7 +108,7 @@ This theme ships with a slightly altered monakai syntax highlighting stylesheet 
 
 The theme's base layout pulls in a css stylesheet which is a tiny variation on the `monokai` theme to handle the highlighting styles: `/assets/css/syntax.css`
 
-#### Sidebar 
+### Sidebar 
 
 The theme ships with a sidebar comes with a search form which has %like% behaviour for all of your page names.
 
@@ -118,6 +118,18 @@ To active the sidebar set the `usesidebar` site param to `true` in your `config.
 [params]
   useSidebar = true
 ```
+
+## Content Types 
+
+### Canonical Page
+
+### Headless Bundle
+
+## Content Sections
+
+### Tiles
+
+### Column Grid
 
 ## License
 
