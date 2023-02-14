@@ -5,7 +5,6 @@
     </article>
     {{ $bundle := .Site.GetPage .Params.bundle }}
     {{ $columns := $bundle.Resources.Match "column-*.md" }}
-    {{ $columns }}
     {{- with $columns -}}
         {{ $title :=  $ctx.Params.columntitle }}
         {{ $context := dict "title" $title "columns" $columns "bundle" $bundle }}
