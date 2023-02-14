@@ -1,12 +1,12 @@
 name = "Spaced Web Theme"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = "The theme for Spaced Web company website"
-homepage = "https://spaced-web.com"
-tags = []
-features = []
+licenselink = "https://github.com/Morgscode/hugo-theme-spaced-web/blob/master/LICENSE"
+description = "The Spaced Portfolio website Theme."
+homepage = "https://spaced-web.xyz"
+tags = ["Minimalistic", "Dark mode", "Blog", "Responsive", "Dark", "Light", "Portfolio", "Personal"]
+features = ['']
 min_version = "0.41.0"
 
 [author]
   name = "Spaced Web"
-  homepage = "https://spaced-web.com"
+  homepage = "https://spaced-web.xyz"
