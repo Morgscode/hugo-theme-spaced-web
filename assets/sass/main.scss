@@ -23,6 +23,7 @@ $colorPurple: {{ .Site.Params.colors.purple | default "#9c88ff"}};
 @import "./components/posts.scss";
 @import "./components/grid-column.scss";
 @import "./components/images.scss";
+@import "./components/forms.scss";
 @import "./components/author.scss";
 @import "./components/pagination.scss";
 @import "./components/sidebar.scss";

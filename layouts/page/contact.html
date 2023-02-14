@@ -2,5 +2,7 @@
     <article class="col-8 col-md-12 mx-auto p-t-l p-b-l">
         {{ .Content }}
     </article>
-    {{- partial "contact-form.html" . -}}
+    <div class="col-8 col-md-12 mx-auto p-b-l">
+        {{- partial "contact-form.html" . -}}
+    </div>
 {{ end }}

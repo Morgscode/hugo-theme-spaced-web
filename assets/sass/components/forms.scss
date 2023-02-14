@@ -1,0 +1,23 @@
+form {
+    border-radius: $borderRadius;
+    color: $colorBlack;
+    border: 2px solid $colorBlack;
+    label {
+     font-size: 4vh;
+    }
+    input, textarea {
+        width: 100%;
+        margin-bottom: 1rem;
+    } 
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    form {
+        color: $colorWhite;
+        border: 2px solid $colorWhite;
+        input, textarea {
+            width: 100%;
+            margin-bottom: 1rem;
+        } 
+    }
+}
