@@ -1,0 +1,13 @@
+
+@media only screen and (max-width: 992px) {
+
+    .tiles {
+        .content-column {
+            order: 2;
+        }
+        .image-column {
+            order: 1;
+        }
+    }
+
+}

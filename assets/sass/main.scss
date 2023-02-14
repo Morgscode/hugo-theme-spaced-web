@@ -20,10 +20,11 @@ $colorPurple: {{ .Site.Params.colors.purple | default "#9c88ff"}};
 // components
 @import "./components/header.scss";
 @import "./components/navigation.scss";
-@import "./components/posts.scss";
+@import "./components/tiles.scss";
 @import "./components/grid-column.scss";
 @import "./components/images.scss";
 @import "./components/forms.scss";
+@import "./components/posts.scss";
 @import "./components/author.scss";
 @import "./components/pagination.scss";
 @import "./components/sidebar.scss";
