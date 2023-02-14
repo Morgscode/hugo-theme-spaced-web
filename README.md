@@ -1,4 +1,4 @@
-# Spaced Blog Theme
+# Spaced Web Theme
 
 A beautifully minimalistic Hugo theme for blogs. With dark mode, page search and a11y out of the box.
 
