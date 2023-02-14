@@ -4,9 +4,9 @@
     <h2 class="text-center">{{ .title }}</h2>
     {{- $count := 1 -}}
     {{- with $columns -}}
-    <div class="grid-column p-b-l p-t-l">
+    <div class="grid-column row p-b-l p-t-l">
         {{- range . -}}
-        <div class="column col-6" data-id="{{ $count }}">
+        <div class="column p-3 col-6 col-md-12" data-id="{{ $count }}">
             {{ $image := $bundle.Resources.GetMatch .Params.image }}
             {{- with $image -}}
             <div class="image" style="background-image: url({{ .Permalink }})"></div>

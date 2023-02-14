@@ -141,7 +141,7 @@ label {
   margin-bottom: #{$spacing-s / 2};
 }
 
-input {
+input, textarea {
   display: inline-block;
   padding: #{$spacing-s / 2};
   border-radius: $borderRadius;
@@ -158,6 +158,12 @@ input[type='submit'], button {
   font-family: $titleFont;
   font-size: #{$fontSize + 0.15rem};
   font-weight: 700;
+}
+
+button {
+  border: 2px solid $colorBlack;
+  color: $colorBlack;
+  border-radius: $borderRadius;
 }
 
 /* width */
@@ -216,7 +222,7 @@ input[type='submit'], button {
     color: $colorWhite;
   }
   
-  input {
+  input, textarea, button {
     border: 2px solid $colorWhite;
     color: $colorWhite;
   }
