@@ -1,8 +1,6 @@
 # Spaced Web Theme
 
-A beautifully minimalistic Hugo theme for blogs. With dark mode, page search and a11y out of the box.
-
-TODOS:
+A beautifully minimalistic Hugo theme for Personal and Portfolio websites. With dark mode, page search and a11y out of the box.
 
 ![Intro](https://github.com/Morgscode/hugo-theme-spaced-web/blob/master/images/cover.png)
 
