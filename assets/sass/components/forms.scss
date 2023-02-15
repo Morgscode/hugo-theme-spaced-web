@@ -2,6 +2,7 @@ form {
     border-radius: $borderRadius;
     color: $colorBlack;
     border: 2px solid $colorBlack;
+    padding: $spacing-s;
     label {
      font-size: 4vh;
     }

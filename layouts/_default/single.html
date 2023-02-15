@@ -18,12 +18,12 @@
       </div>
       {{- with .Params.categories -}}
       <div class="post-categories m-t-s">
-        {{- partial "post-categories.html" (dict "cats" . "ctx" $) -}}
+        {{- partial "blog/post-categories.html" (dict "cats" . "ctx" $) -}}
       </div>
       {{- end -}}
       {{- with .Params.tags -}}
       <div class="post-tags m-t-s">
-        {{- partial "post-tags.html" (dict "tags" . "ctx" $) -}}
+        {{- partial "blog/post-tags.html" (dict "tags" . "ctx" $) -}}
       </div>
       {{- end -}}
     </div>
@@ -40,7 +40,7 @@
       </div>
       {{- if $.Site.Params.usesidebar -}}
       <div class="col-4 col-md-12">
-          {{- partial "sidebar.html" . -}}
+          {{- partial "blog/sidebar.html" . -}}
       </div>
       {{- end -}}
     </div>
