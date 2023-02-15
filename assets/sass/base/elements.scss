@@ -103,6 +103,11 @@ blockquote {
     display: block;
     background-color: transparent;
   }
+  ul, ol {
+    li {
+      color: $colorWhite;
+    }
+  }
 }
 
 ol,
