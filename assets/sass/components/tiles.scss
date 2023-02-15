@@ -1,3 +1,22 @@
+.tiles {
+    .image-column {
+        position: relative;
+        z-index: 2;
+    }
+    .content-column {
+        position: relative;
+        z-index: 1;
+        background-color: darken($colorWhite, 10);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .tiles {
+        .content-column {
+            background-color: darken($colorBlack, 10);
+        }
+    }
+}
 
 @media only screen and (max-width: 992px) {
 
@@ -5,6 +24,7 @@
         .content-column {
             order: 2;
         }
+
         .image-column {
             order: 1;
         }

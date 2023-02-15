@@ -5,13 +5,13 @@
     {{- with $tiles -}}
     {{- range . -}}
     <div class="tiles-row p-b-l p-t-l">
-        <div class="row m-b-m items-center">
+        <div class="row">
             {{ $cols := "col-6 col-md-12"}}
             {{- if eq (mod $count 2) 0 -}}
             {{ $cols = "col-6 col-md-12 mx-auto order-2" }}
             {{- end -}}
-            <div class="content-column {{ $cols }}">
-                <div class="p-3">
+            <div class="content-column flex items-center p-3 {{ $cols }}">
+                <div>
                     {{ .Content }}
                 </div>
             </div>

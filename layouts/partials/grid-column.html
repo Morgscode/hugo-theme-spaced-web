@@ -9,9 +9,11 @@
         <div class="column p-3 col-6 col-lg-12" data-id="{{ $count }}">
             {{ $image := $bundle.Resources.GetMatch .Params.image }}
             {{- with $image -}}
-            <div class="image" style="background-image: url({{ .Permalink }})"></div>
+            <div class="column-image">
+                <div class="image" style="background-image: url({{ .Permalink }})"></div>
+            </div>
             {{- end -}}
-            <div class="p-3">
+            <div class="column-content p-3">
                 {{ .Content }}
             </div>
         </div>

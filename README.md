@@ -96,7 +96,7 @@ To add a default cover image for a specific post - place an image named `cover.j
 
 [Read the Hugo documentation](https://gohugo.io/content-management/menus/#readout) for more informations about menus.
 
-### syntax highlighting
+### Syntax highlighting
 
 This theme ships with a slightly altered monakai syntax highlighting stylesheet and more or less the default markup highlight configuration. To use it set the `noClasses` param to false in the `markup highlight` config.
 

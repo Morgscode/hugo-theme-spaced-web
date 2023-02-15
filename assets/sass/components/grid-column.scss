@@ -1,0 +1,23 @@
+.grid-column {
+    .column {
+        &-image {
+            position: relative;
+            z-index: 2;
+        }
+        &-content {
+            position: relative;
+            z-index: 1;
+            background-color: darken($colorWhite, 10);
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .grid-column {
+        .column {
+            &-content {
+                background-color: darken($colorBlack, 10);
+            }
+        }
+    }
+}
