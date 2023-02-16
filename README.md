@@ -123,7 +123,32 @@ To active the sidebar set the `usesidebar` site param to `true` in your `config.
 
 ### Canonical Page
 
+This theme ships with a convenience archetype called `page`. It has some subtle behaviour layered on top of the deafult archetype `default.md`.
+
+```toml
+---
+title: "{{ replace .Name "-" " " | title }}"
+name: {{ .Name }}
+draft: true
+type: page
+layout: inner
+bundle: 
+---
+```
+
+Setting a `type` just lets hugo know we want this content to be treated slightly differently. Specifically, it's going to look for layouts in the `layouts/pages` directory in the theme. So you can easily define a specific layout, and also re-use layouts for your canonical pages for your website.
+
+To create a new page:
+
+```bash
+hugo new --kind page %PAGE NAME% 
+```
+
+Creating a new content type gives us a new page direcroty in your website's `/content`
+
 ### Headless Bundle
+
+## Content Relatinships
 
 ## Content Sections
 
