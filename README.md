@@ -125,7 +125,7 @@ To active the sidebar set the `usesidebar` site param to `true` in your `config.
 
 This theme ships with a convenience archetype called `page`. It has some subtle behaviour layered on top of the deafult archetype `default.md`.
 
-```toml
+```md
 ---
 title: "{{ replace .Name "-" " " | title }}"
 name: {{ .Name }}
@@ -144,7 +144,9 @@ To create a new page:
 hugo new --kind page %PAGE NAME% 
 ```
 
-Creating a new content type gives us a new page direcroty in your website's `/content`
+Creating a new content type gives us a new page in your website's `/content` directory.
+
+The new page will contain an `_index.md` file - This tells hugo that it's not just a standard lister page, but that it should expect to also have it's own front-matter and content. [Read about _index.md](https://gohugo.io/content-management/organization/#index-pages-_indexmd)
 
 ### Headless Bundle
 
