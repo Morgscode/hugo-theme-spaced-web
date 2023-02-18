@@ -14,11 +14,38 @@ nav {
   ul {
     list-style: none;
     li {
+      margin: 0px 1rem;
       a {
+        position: relative;
         text-decoration: none;
         color: $colorBlack;
+        padding: 12px 22px;
         &:visited {
           color: $colorBlack;
+        }
+        &::after {
+          content: "";
+          background-color: $colorBlack;
+          display: block;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          border-radius: 2px;
+          -webkit-transition: .5s ease transform;
+          -o-transition: .5s ease transform;
+          transition: .5s ease transform;
+          -webkit-transform: scaleX(0);
+          -ms-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transform-origin: right;
+          -ms-transform-origin: right;
+          transform-origin: right;
+        }
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: left;
         }
       }
     }
@@ -31,7 +58,6 @@ nav {
   }
   &-link {
     display: inline-flex;
-    padding: 1rem;
   }
 }
 
@@ -102,6 +128,18 @@ nav {
 }
 
 @media only screen and (max-width: 992px) {
+
+  nav {
+    ul {
+      li {
+        a {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
   .mobile-nav-close,
   .mobile-nav-open {
     display: flex;
@@ -143,6 +181,9 @@ nav {
           color: $colorWhite;
           &:visited {
             color: $colorWhite;
+          }
+          &::after {
+            background-color: $colorWhite;
           }
         }
       }
