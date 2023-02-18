@@ -2,7 +2,7 @@
     {{ $cxt := . }}
     {{ $bundle := .Site.GetPage .Params.bundle }}
     {{ $tiles := $bundle.Resources.Match "tile-*.md" }}
-    <article class="col-8 col-md-12 mx-auto p-t-l p-b-l">
+    <article class="col-12 p-t-l p-b-l">
         {{ .Content }}
     </article>
     {{- with $tiles -}}

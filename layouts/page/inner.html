@@ -1,14 +1,15 @@
 {{ define "main" }}
     {{ $ctx := . }}
-    <article class="col-8 col-md-12 mx-auto p-t-l p-b-l">
-        {{ .Content }}
-    </article>
     {{ $bundle := .Site.GetPage .Params.bundle }}
     {{ $columns := $bundle.Resources.Match "column-*.md" }}
     {{ $tiles := $bundle.Resources.Match "tile-*.md" }}
+    <article class="col-12 p-t-l p-b-l">
+        {{ .Content }}
+    </article>
     {{- with $columns -}}
+        {{ $limit := $ctx.Params.columns }}
         {{ $title :=  $ctx.Params.columntitle }}
-        {{ $context := dict "title" $title "columns" $columns "bundle" $bundle }}
+        {{ $context := dict "title" $title "columns" $columns "bundle" $bundle "limit" $limit }}
         {{- partial "grid-column.html" $context -}}
     {{- end -}}
     {{- with $tiles -}}

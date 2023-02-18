@@ -1,12 +1,25 @@
 {{ $columns := .columns }}
 {{ $bundle := .bundle }}
+{{ $limit := .limit }}
+{{ $classes := "col-12" }}
+
+{{ if (eq $limit 1) }}
+ {{ $classes = "col-12" }}
+{{ else if (eq $limit 2) }}
+    {{ $classes = "col-6" }}
+{{ else if (eq $limit 3) }}
+    {{ $classes = "col-4" }}
+{{ else if (eq $limit 4) }}
+    {{ $classes = "col-3"}}
+{{ end }}
+
 <div class="columns">
     <h2 class="text-center">{{ .title }}</h2>
     {{- $count := 1 -}}
     {{- with $columns -}}
     <div class="grid-column row p-b-l p-t-l">
         {{- range . -}}
-        <div class="column p-3 col-6 col-lg-12" data-id="{{ $count }}">
+        <div class="column p-3 {{ $classes }}  col-lg-12" data-id="{{ $count }}">
             {{ $image := $bundle.Resources.GetMatch .Params.image }}
             {{- with $image -}}
             <div class="column-image">
