@@ -14,7 +14,7 @@ nav {
   ul {
     list-style: none;
     li {
-      margin: 0px 1rem;
+      margin: 0 1rem;
       a {
         position: relative;
         text-decoration: none;
@@ -132,6 +132,7 @@ nav {
   nav {
     ul {
       li {
+        margin: 0;
         a {
           &::after {
             display: none;
