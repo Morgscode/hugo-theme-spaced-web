@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+  <title>{{ if .Params.htmlpagetitle }}{{ .Params.htmlpagetitle }}{{ else if (.Title) }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
   {{ range .Site.Params.author -}}
     <meta name="author" content="{{ .name | default " Jeffrey Lebowski" }}" />
   {{ end -}}
