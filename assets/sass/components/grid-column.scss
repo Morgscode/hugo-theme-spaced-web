@@ -1,5 +1,6 @@
 .grid-column {
     .column {
+        display: flex;
         &-image {
             position: relative;
             z-index: 2;

@@ -7,6 +7,8 @@
     </article>
     {{- with $tiles -}}
         {{ $context := dict "tiles" $tiles "bundle" $bundle }}
-        {{- partial "tiles.html" $context -}}
+        <section class="">
+            {{- partial "tiles.html" $context -}}
+        </section>
     {{- end -}}
 {{ end }}

@@ -10,10 +10,10 @@
         {{ $limit := $ctx.Params.columns }}
         {{ $title :=  $ctx.Params.columntitle }}
         {{ $context := dict "title" $title "columns" $columns "bundle" $bundle "limit" $limit }}
-        {{- partial "grid-column.html" $context -}}
+        <section class="m-b-l">{{- partial "grid-column.html" $context -}}</section>
     {{- end -}}
     {{- with $tiles -}}
         {{ $context := dict "tiles" $tiles "bundle" $bundle }}
-        {{- partial "tiles.html" $context -}}
+        <section class="m-b-l">{{- partial "tiles.html" $context -}}</section>
 {{- end -}}
 {{ end }}

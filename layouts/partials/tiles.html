@@ -4,7 +4,7 @@
     {{- $count := 1 -}}
     {{- with $tiles -}}
     {{- range . -}}
-    <div class="tiles-row p-b-l p-t-l">
+    <div class="tiles-row m-b-l">
         <div class="row">
             {{ $cols := "col-6 col-md-12"}}
             {{- if eq (mod $count 2) 0 -}}
