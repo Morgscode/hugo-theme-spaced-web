@@ -19,7 +19,7 @@ nav {
         position: relative;
         text-decoration: none;
         color: $colorBlack;
-        padding: 12px 22px;
+        padding: $spacing-s;
         &:visited {
           color: $colorBlack;
         }
@@ -104,6 +104,7 @@ nav {
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-top: 1.75rem;
   margin-bottom: 2rem;
   &:hover {
     cursor: pointer;
@@ -144,7 +145,7 @@ nav {
     display: flex;
   }
   .main-navigation {
-    padding: 2rem;
+    padding: 1rem;
     margin-left: unset;
     position: fixed;
     top: 0;
