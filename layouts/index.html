@@ -39,24 +39,20 @@
                 </div>
                 {{ end }}
             </div>
-
             {{- with .Params.categories }}
             <div class="posts-list-item-categories m-t-s">
                 {{ partial "blog/post-categories.html" (dict "cats" . "ctx" $) }}
             </div>
             {{- end }}
-
             {{- with .Params.tags }}
             <div class="posts-list-item-tags m-t-s">
                 {{ partial "blog/post-tags.html" (dict "tags" . "ctx" $) }}
             </div>
             {{- end }}
-
             <div class="posts-list-item-link btn m-t-m">
                 <a href="{{ .Permalink }}">View {{ .Type | singularize }}</a>
             </div>
         </li>
-
         {{ end }}
     </ul>
 </div>
