@@ -6,55 +6,26 @@
     {{ .Content }}
 </article>
 {{- with $tiles -}}
-{{ $context := dict "tiles" $tiles "bundle" $bundle }}
+{{- $context := dict "tiles" $tiles "bundle" $bundle -}}
 <section class="">
     {{- partial "tiles.html" $context -}}
 </section>
 {{- end -}}
 {{- $posts := slice -}}
-{{ range (first 5 (where .Site.Pages.ByPublishDate "Section" "posts")).Reverse }}
-{{ if .Title }}
-{{ $post := .Page }}
-{{ $posts = append $post $posts }}
-{{ end }}
-{{ end }}
-{{ with $posts }}
-<div class="posts p-t-l p-b-l">
-    <h2 class="m-b-m">Latest Web Design Blog Posts</h2>
-    <ul class="posts-list posts-list-grid row">
-        {{ range $posts }}
-        <li class="posts-list-item">
-            <h3 class="posts-list-item-title m-b-m"><a class="posts-list-item-link" href="{{ .Permalink }}">{{ .Title
-                    }}</a>
-            </h3>
-            <div class="posts-list-item-description">
-                {{ if .PublishDate }}
-                <div>
-                    <p>Posted on: <span>{{ .PublishDate.Format "Jan 2, 2006" }}</span></p>
-                </div>
-                {{ end }}
-                {{ if .ReadingTime }}
-                <div>
-                    <p><span>{{ .ReadingTime }} min read</span></p>
-                </div>
-                {{ end }}
-            </div>
-            {{- with .Params.categories }}
-            <div class="posts-list-item-categories m-t-s">
-                {{ partial "blog/post-categories.html" (dict "cats" . "ctx" $) }}
-            </div>
-            {{- end }}
-            {{- with .Params.tags }}
-            <div class="posts-list-item-tags m-t-s">
-                {{ partial "blog/post-tags.html" (dict "tags" . "ctx" $) }}
-            </div>
-            {{- end }}
-            <div class="posts-list-item-link btn m-t-m">
-                <a href="{{ .Permalink }}">View {{ .Type | singularize }}</a>
-            </div>
-        </li>
-        {{ end }}
-    </ul>
-</div>
-{{ end }}
-{{ end }}
+{{- range (first 5 (where .Site.Pages.ByPublishDate "Section" "posts")).Reverse -}}
+    {{- if .Title -}}
+        {{- $post := .Page -}}
+        {{- $posts = append $post $posts -}}
+    {{- end -}}
+{{- end -}}
+{{- with $posts -}}
+    <div class="posts p-t-l p-b-l">
+        <h2 class="m-b-m">Latest Web Design Blog Posts</h2>
+        <ul class="posts-list posts-list-grid row">
+            {{- range $posts -}}
+            {{- partial "blog/post-list-item.html" . -}}
+            {{- end -}}
+        </ul>
+    </div>
+{{- end -}}
+{{- end -}}
