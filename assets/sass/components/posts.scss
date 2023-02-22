@@ -84,6 +84,12 @@
   color: $colorBlack;
 }
 
+.posts-list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
 @media (prefers-color-scheme: dark) {
   .posts {
     &-list {
