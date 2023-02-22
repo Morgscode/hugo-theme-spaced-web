@@ -6,6 +6,7 @@
       padding: #{$spacing-l / 2};
       border-radius: $borderRadius;
       background-color: darken($colorWhite, 10);
+      margin-bottom: $spacing-m;
       &:last-child {
         margin-bottom: 0px;
       }
@@ -88,6 +89,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  .posts-list-item {
+    margin-bottom: 0px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
