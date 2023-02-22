@@ -3,7 +3,9 @@
 {{ $bundle := .Site.GetPage .Params.bundle }}
 {{ $tiles := $bundle.Resources.Match "tile-*.md" }}
 <article class="col-12 p-t-l p-b-l m-b-l">
-    {{ .Content }}
+    <div class="text-lg">
+        {{ .Content }}
+    </div>
 </article>
 {{- with $tiles -}}
 {{- $context := dict "tiles" $tiles "bundle" $bundle -}}

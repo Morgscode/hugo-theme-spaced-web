@@ -208,3 +208,27 @@
   src: url('../../fonts/Poppins/Poppins-BlackItallic.ttf');
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-lg {
+  font-size: #{$fontSize + .2rem};
+   p, li, a {
+    font-size: inherit;
+  }
+}
+
+.text-xl {
+  font-size: #{$fontSize + .35rem};
+  p, li, a {
+    font-size: inherit;
+  }
+}
+
+.text-2xl {
+  font-size: #{$fontSize + .5rem};
+  p, li, a {
+    font-size: inherit;
+  }
+}
