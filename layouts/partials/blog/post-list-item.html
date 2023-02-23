@@ -24,7 +24,7 @@
         {{ partial "blog/post-tags.html" (dict "tags" . "ctx" $) }}
     </div>
     {{- end }}
-    <div class="posts-list-item-link btn m-t-m">
+    <div class="posts-list-item-link m-t-m">
         <a href="{{ .Permalink }}">View {{ .Type | singularize }}</a>
     </div>
 </li>

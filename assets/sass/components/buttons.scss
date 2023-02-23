@@ -1,0 +1,22 @@
+.btn {
+    display: inline-block;
+    padding: #{$spacing-m / 2} #{$spacing-s / 2};
+    font-weight: 600;
+    border: 2px solid $colorBlack;
+    color: $colorBlack;
+    border-radius: $borderRadius;
+    cursor: pointer;
+    &:visited {
+        color: $colorBlack;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .btn {
+        border: 2px solid $colorWhite;
+        color: $colorWhite;
+        &:visited {
+            color: $colorWhite;
+        }
+    }
+}
