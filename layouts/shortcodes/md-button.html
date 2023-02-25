@@ -1,6 +1,7 @@
 <a 
 class="{{.Get `type` | default `btn`}}" 
-target="{{.Get `target` | default `_self`}}" 
+target="{{.Get `target` | default `_self`}}"
+rel="{{.Get `rel`}}"
 href="{{.Get `url` | default `/`}}"
 id="{{ .Get `id` | default (md5 now) }}">
     {{ .Get "text" | default "Read more"}}
