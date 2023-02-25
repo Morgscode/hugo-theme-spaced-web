@@ -131,3 +131,12 @@
     border: 2px solid $colorWhite;
   }
 }
+
+
+@media only screen and (max-width: 992px) {
+  .posts-list-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
