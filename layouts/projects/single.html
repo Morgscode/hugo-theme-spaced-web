@@ -9,12 +9,12 @@
       <div class="col-6 col-md-12 m-b-l">
         <div>
           {{ .Content }}
-          <a href="{{ .Params.siteurl }}" class="btn">View website project</a>
+          <a href="{{ .Params.siteurl }}" target="_blank" rel="noopener norefer" class="btn">View website project</a>
         </div>
       </div>
       <div class="col-6 col-md-12">
         <div>
-          <a href="{{ .Params.siteurl }}">
+          <a target="_blank" rel="noopener norefer"  href="{{ .Params.siteurl }}">
             <img src="{{ $image.RelPermalink }}" alt="Website design in Hastings, East Sussex">
           </a>
         </div>

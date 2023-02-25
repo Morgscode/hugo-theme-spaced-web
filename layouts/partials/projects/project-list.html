@@ -1,0 +1,12 @@
+<div class="posts p-1">
+    <ul class="posts-list">
+      {{ range where .Paginator.Pages "Type" "!=" "page" }}
+        {{- partial "projects/project-list-item.html" . -}}
+      {{ else }}
+      <li>
+        <h2>No {{ .Type }} found</h2>
+      </li>
+      {{ end }}
+    </ul>
+    {{ partial "blog/pagination.html" . }}
+  </div>
