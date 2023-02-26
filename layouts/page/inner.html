@@ -17,5 +17,8 @@
     {{- with $tiles -}}
         {{ $context := dict "tiles" $tiles "bundle" $bundle }}
         <section class="m-b-l">{{- partial "tiles.html" $context -}}</section>
-{{- end -}}
+    {{- end -}}
+    <section class="m-b-l">
+        {{- partial "latest-projects.html" . -}}
+    </section>
 {{ end }}
