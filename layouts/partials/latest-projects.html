@@ -1,5 +1,5 @@
 {{- $posts := slice -}}
-{{- range (first 5 (where $.Site.Pages.ByPublishDate "Section" "projects")).Reverse -}}
+{{- range (first 3 (where $.Site.Pages.ByPublishDate "Section" "projects")).Reverse -}}
     {{- if .Title -}}
         {{- $post := .Page -}}
         {{- $posts = append $post $posts -}}
@@ -8,7 +8,7 @@
 {{- with $posts -}}
     <div class="posts">
         <h2 class="m-b-m">Latest Web Design Projects</h2>
-        <ul class="posts-list posts-list-grid row">
+        <ul class="posts-list posts-list-grid">
             {{- range $posts -}}
             {{- partial "projects/project-list-item.html" . -}}
             {{- end -}}

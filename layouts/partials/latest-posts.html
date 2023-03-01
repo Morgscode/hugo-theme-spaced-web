@@ -8,7 +8,7 @@
 {{- with $posts -}}
     <div class="posts">
         <h2 class="m-b-m">Latest Web Design Blog Posts</h2>
-        <ul class="posts-list posts-list-grid row">
+        <ul class="posts-list posts-list-grid">
             {{- range $posts -}}
             {{- partial "blog/post-list-item.html" . -}}
             {{- end -}}
