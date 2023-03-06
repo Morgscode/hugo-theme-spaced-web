@@ -9,7 +9,7 @@
       <div class="col-6 col-md-12 m-b-l">
         <div>
           {{ .Content }}
-          <a href="{{ .Params.siteurl }}" target="_blank" rel="noopener norefer" class="btn">View website project</a>
+          <a href="{{ .Params.siteurl }}" target="_blank" rel="noopener norefer" class="btn">{{ .Params.linktext | default "View website project"}}</a>
         </div>
       </div>
       <div class="col-6 col-md-12">
