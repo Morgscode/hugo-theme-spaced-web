@@ -1,5 +1,5 @@
 {{- $posts := slice -}}
-{{- range (first 5 (where $.Site.Pages.ByPublishDate "Section" "posts")).Reverse -}}
+{{- range (last 5 (where $.Site.Pages.ByPublishDate "Section" "posts")).Reverse -}}
     {{- if .Title -}}
         {{- $post := .Page -}}
         {{- $posts = append $post $posts -}}
