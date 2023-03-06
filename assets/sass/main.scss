@@ -31,4 +31,3 @@ $colorPurple: {{ .Site.Params.colors.purple | default "#9c88ff"}};
 @import "./components/sidebar.scss";
 @import "./components/search.scss";
 @import "./components/footer.scss";
-@import "./components/404.scss";

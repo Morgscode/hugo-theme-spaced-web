@@ -6,6 +6,7 @@ description: {{ replace .Name "-" " " | title }} - Web design project in Hasting
 draft: true
 type: projects
 layout: single
-siteurl: 
-siteimage: /web-design-hastings.png
+siteurl:
+linktext:
+siteimage:
 ---
