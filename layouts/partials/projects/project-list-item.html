@@ -9,10 +9,12 @@
       </div>
     </div>
     <div class="col-6 col-md-12">
+      <div class="posts-list-item-image">
         {{ $image := .Resources.GetMatch .Params.siteimage }}
-        <a href="{{ .Permalink }}">
+          <a href="{{ .Permalink }}">
             <img src="{{ $image.RelPermalink }}" alt="Website design in Hastings, East Sussex">
           </a>
+      </div>
     </div>
   </div>
 

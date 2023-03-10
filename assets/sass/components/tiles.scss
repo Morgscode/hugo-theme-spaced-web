@@ -2,6 +2,9 @@
     .image-column {
         position: relative;
         z-index: 2;
+        .image {
+            height: 100%;
+        }
     }
     .content-column {
         position: relative;
