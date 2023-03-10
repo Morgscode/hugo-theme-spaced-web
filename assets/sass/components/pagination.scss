@@ -5,8 +5,15 @@
       display: inline-block;
       border: 2px solid $colorBlack;
       border-radius: $borderRadius;
+      margin: 0 .25rem;
       &-link {
         color: $colorBlack;
+        &::before {
+          display: none;
+        }
+        &:after {
+          display: none;
+        }
         &:visited {
           color: $colorBlack;
         }
